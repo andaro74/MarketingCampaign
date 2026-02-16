@@ -36,6 +36,13 @@ namespace MarketingCampaign
             sweepstakesApi.MapGet("/", () => sampleSweepstakes)
                 .WithName("GetSweepstakes");
 
+            sweepstakesApi.MapGet("/{sku}", Results<Ok<Sweepstakes>, NotFound> (string sku) =>
+                sampleSweepstakes.FirstOrDefault(sweepstake =>
+                    string.Equals(sweepstake.Sku, sku, StringComparison.OrdinalIgnoreCase)) is { } sweepstake
+                    ? TypedResults.Ok(sweepstake)
+                    : TypedResults.NotFound())
+                .WithName("GetSweepstakesBySku");
+
             app.Run();
         }
     }

@@ -5,3 +5,4 @@
 ## API
 
 - `GET /sweepstakes`: Returns the list of available sweepstakes.
+- `GET /sweepstakes/{sku}`: Returns a sweepstake by SKU.
