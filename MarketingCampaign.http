@@ -1,0 +1,11 @@
+@MarketingCampaign_HostAddress = http://localhost:5217
+
+GET {{MarketingCampaign_HostAddress}}/sweepstakes/
+Accept: application/json
+
+###
+
+GET {{MarketingCampaign_HostAddress}}/sweepstakes/1
+Accept: application/json
+
+###
