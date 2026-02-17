@@ -3,7 +3,7 @@
     "http": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "todos",
+      "launchUrl": "sweepstakes",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

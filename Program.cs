@@ -22,6 +22,7 @@ namespace MarketingCampaign
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.MapOpenApi("/openapi/{documentName}.yaml");
             }
 
             Sweepstakes[] sampleSweepstakes =
